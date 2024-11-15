@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-
+import Welcome from './components/Welcome';
+import Guest from './components/guest';
+import List from './components/List';
+import ProductsList from './components/ProductsList';
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn]=useState(false);
+
+  let element;
+  if(isLoggedIn)
+  {
+    element=<Welcome name="abdallah"/>
+  }
+  else{
+    element=<Guest name="ahmed"/>
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   
+
+    <ProductsList/>
+    </>
   );
 }
 

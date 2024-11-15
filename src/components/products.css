@@ -1,0 +1,12 @@
+.products-list {
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Fixed typo here */
+    justify-content: center;
+    gap: 20px;
+}
